@@ -5,7 +5,7 @@ Reference Guide
 * [Label Encoding](#Label-Encoding)
     * [One Hot](#One-Hot)  
   
-[Data Scaling](#Data-Scaling)  
+* [Data Scaling](#Data-Scaling)  
   
 * [Model Selection](#Model-Selection)  
       * [Regression](#Regression)  
