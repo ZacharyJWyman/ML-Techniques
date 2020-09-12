@@ -32,7 +32,7 @@ usage:
 lin_reg = LinearRegression()
 log_reg = LogisticRegression()
 gb = GradientBoostingRegressor()
-xgb = XGBRegresspr()
+xgb = XGBRegressor()
 rfr = RandomForestRegressor()
 lgm = LGMBRegressor()
 ridge = Ridge()
@@ -41,16 +41,14 @@ ridge = Ridge()
 fitting:
 ```
 lin_reg.fit(X_train, y_train)
-log_reg.fit(X_train, y_train)
-gb.fit(X_train, y_train)
-xgb.fit(X_train, y_train)
-rfr.fit(X_train, y_train)
-lgm.fit(X_train, y_train)
-ridge.fit(X_train, y_train)
-```
+```  
 if error occurs consider calling ```.values``` after df
-  
     
+predicting:  
+```
+y_pred = lin_reg.predict(X_test)
+```
+   
 ##### Scoring
 ```
 def print_scores(y_test, y_pred):
@@ -76,13 +74,9 @@ dt = DecisionTreeClassifier()
 fitting:
 ```
 rfc.fit(X_train, y_train)
-ada.fit(X_train, y_train)
-gbc.fit(X_train, y_train)
-vc.fit(X_train, y_train)
-dt.fit(X_train, y_train)
 ```  
 if error occurs consider calling ```.values``` after df  
-
+  
 ##### Scoring
 ```from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score```  
 usage: ```accuracy_score(y_test, y_pred)```
