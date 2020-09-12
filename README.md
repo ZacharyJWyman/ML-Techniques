@@ -127,7 +127,8 @@ grid_search.best_params_
   
 ### Stacking and Blending  
 Stacking and Blending ensemble-techniques generally increase model accuracy while creating a more robust model (less sensitive to outliers). 
-```from mlxtend import StackingCVRegressor, StackingCVClassifier```  
+```from mlxtend.regressor import StackingCVRegressor```
+```from mlxtend.classifier import StackingCVClassifier```  
   
 Stacking:
 ```
