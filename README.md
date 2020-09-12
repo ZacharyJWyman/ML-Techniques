@@ -10,4 +10,4 @@ usage on a dataframe: ```pd.get_dummies(df)```
 
 
 ```from sklearn.preprocessing import OneHotEncoder
-y = OneHotEncoder().fit_transform(x) ```
+y = OneHotEncoder().fit_transform(x)```
