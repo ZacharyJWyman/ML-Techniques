@@ -9,7 +9,7 @@ Reference Guide
      * [Regression](#Regression)        
      * [Classification](#Classification)     
 * [Hypertuning](#Hypertuning-Parameters)   
-* [Stacking & Blending](#Stacking-/-Blending)  
+* [Stacking & Blending](#Stacking-and-Blending)  
 
 
 ### Label Encoding
@@ -125,7 +125,7 @@ grid_search.best_estimator_
 grid_search.best_params_
 ```
   
-### Stacking/Blending  
+### Stacking and Blending  
 Stacking and Blending ensemble-techniques generally increase model accuracy while creating a more robust model (less sensitive to outliers). 
 ```from mlxtend import StackingCVRegressor, StackingCVClassifier```  
   
