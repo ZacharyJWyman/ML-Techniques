@@ -8,7 +8,7 @@ Reference Guide
 [Data Scaling](#Data-Scaling)  
   
 [Model Selection](#Model-Selection)
-* [Regression](#Regression)  
+* [Regression](#Regression)
   * [Scoring](#Regression-Scoring)    
 * [Classification](#Classification)
   * [Scoring](#Classification-Scoring)  
