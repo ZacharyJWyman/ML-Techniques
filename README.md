@@ -16,14 +16,20 @@ y = OneHotEncoder().fit_transform(x)
 call ```.toarray()``` to convert to sparse to array 
 
 #### Data Scaling
-```from sklearn.preprocessing import StandardScaler```
-
+```from sklearn.preprocessing import StandardScaler```  
+usage:  
+```
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+```
+  
 ### Model Selection & Implementation
 ```from sklearn.model_Selection import train_test_split```
 
 #### Regression
 ```from sklearn.linear_model import LinearRegression, LogisticRegression, Ridge, Lasso, ElasticNet```
-```from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor```
+```from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, DecisionTreeRegressor```
 ```from xgboost import XGBRegressor```
 ```from lightgbm import LGMBRegressor```  
   
@@ -32,6 +38,7 @@ usage:
 lin_reg = LinearRegression()
 log_reg = LogisticRegression()
 gb = GradientBoostingRegressor()
+dt = DecisionTreeRegressor()
 xgb = XGBRegressor()
 rfr = RandomForestRegressor()
 lgm = LGMBRegressor()
@@ -50,6 +57,8 @@ y_pred = lin_reg.predict(X_test)
 ```
    
 ##### Scoring
+```from sklearn.model_selection import cross_val_score```
+  
 ```
 def print_scores(y_test, y_pred):
     print('MAE: ' + str(metrics.mean_absolute_error(y_test, y_pred)))
@@ -57,6 +66,16 @@ def print_scores(y_test, y_pred):
     print('RMSE: ' + str(np.sqrt(metrics.mean_squared_error(y_test, y_pred))))
     print('R-Squared: ' + str(metrics.r2_score(y_test, y_pred)))
  ```
+   
+```
+scores = cross_val_score(lin_reg, X_train, y_train, scoring = 'neg_mean_Squared_error', cv = #)
+rmse_scores = np.sqrt(-scores)
+def display_scores(rmse_scores):
+  print('Scores: ', rmse_scores)
+  print('Mean: ', rmse_scores.mean())
+  print('STD: ', rmse_scores.std())
+```  
+
 
 #### Classification
 ```from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier,  VotingClassifier```
