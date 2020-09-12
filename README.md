@@ -9,5 +9,9 @@ Reference Guide
 usage on a dataframe: ```pd.get_dummies(df)```
 
 
-```from sklearn.preprocessing import OneHotEncoder
-y = OneHotEncoder().fit_transform(x)```
+will return a sparse array: 
+```
+from sklearn.preprocessing import OneHotEncoder
+y = OneHotEncoder().fit_transform(x)
+```
+call ```.toarray()``` to convert to sparse to array 
