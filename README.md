@@ -63,20 +63,38 @@ def print_scores(y_test, y_pred):
 #### Classification
 ```from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier,  VotingClassifier```
 ```from sklearn.tree import DecisionTreeClassifier```
-
+   
+usage:
+```
+rfc = RandomForestClassifier()
+ada = AdaBoostClassifier()
+gbc = GradientBoostingClassifier()
+vc = VotingClassifier()
+dt = DecisionTreeClassifier()
+```
+  
+fitting:
+```
+rfc.fit(X_train, y_train)
+ada.fit(X_train, y_train)
+gbc.fit(X_train, y_train)
+vc.fit(X_train, y_train)
+dt.fit(X_train, y_train)
+```  
+if error occurs consider calling ```.values``` after df  
 
 ##### Scoring
-```from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score```
+```from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score```  
 usage: ```accuracy_score(y_test, y_pred)```
 
 #### Hyptertuning Parameters
-```from sklearn.model_selection import GridSearchCV, RandomizedSearchCV```
+```from sklearn.model_selection import GridSearchCV, RandomizedSearchCV```  
 usage:
 ```param_grid = {
     'n_estimators': [100, 200, 500],
     'max_depth': ['6' ,'8' ,'9'],
 }
-
+  
 grid_search = GridSearchCV(estimator = xgb, param_grid = param_grid, cv = 5, random_state = 42)
 grid_search.fit(X_train, y_train)
 grid_search.best_estimator_
