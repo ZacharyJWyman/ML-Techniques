@@ -89,8 +89,10 @@ usage: ```accuracy_score(y_test, y_pred)```
 
 #### Hyptertuning Parameters
 ```from sklearn.model_selection import GridSearchCV, RandomizedSearchCV```  
+  
 usage:
-```param_grid = {
+```
+param_grid = {
     'n_estimators': [100, 200, 500],
     'max_depth': ['6' ,'8' ,'9'],
 }
