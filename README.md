@@ -122,5 +122,27 @@ grid_search.fit(X_train, y_train)
 grid_search.best_estimator_
 grid_search.best_params_
 ```
-
+  
+#### Stacking & Blending  
+Stacking and Blending ensemble-techniques generally increase model accuracy while creating a more robust model (less sensitive to outliers). 
+```from mlxtend import StackingCVRegressor, StackingCVClassifier```  
+  
+Stacking:
+```
+stack_gen = StackingCVRegressor(regressors = (xgb, gb, lin_reg, ridge, rfr),
+                               meta_regressor = rfr,
+                               use_features_in_secondary = True)
+stack_gen.fit(X_train.values, y_train)
+y_pred = stack_gen.predict(X_test.values)
+```
+  
+Blending:  
+```
+def blend(X_test):
+    return ((0.25 * xgb.predict(X_test)) + \
+            0.25 * rfr.predict(X_test) + \
+           0.5 * stack_gen.predict(np.array(X_test)))
+```
+   
+   
 
