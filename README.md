@@ -4,6 +4,13 @@ Reference Guide
 ## Table of Contents
 [Label Encoding](#Label-Encoding)
 * [One Hot](#One-Hot)
+[Data Scaling](#Data-Scaling)
+[Model Selection](#Model-Selection)
+* [Regression](#Regression)
+  * [Scoring](#Regression-Scoring)
+* [Classification](#Classification)
+  * [Scoring](#Classification-Scoring)
+[Hypertuning](#Hypertuning-Parameters)
 
 ### Label Encoding
 
@@ -17,7 +24,7 @@ y = OneHotEncoder().fit_transform(x)
 ```
 call ```.toarray()``` to convert to sparse to array 
 
-#### Data Scaling
+### Data Scaling
 ```from sklearn.preprocessing import StandardScaler```  
 usage:  
 ```
@@ -58,7 +65,7 @@ predicting:
 y_pred = lin_reg.predict(X_test)
 ```
    
-##### Scoring
+##### Regression Scoring
 ```from sklearn.model_selection import cross_val_score```
   
 ```
@@ -98,7 +105,7 @@ rfc.fit(X_train, y_train)
 ```  
 if error occurs consider calling ```.values``` after df  
   
-##### Scoring
+##### Classification Scoring
 ```from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score```  
 usage: ```accuracy_score(y_test, y_pred)```
 
