@@ -3,4 +3,11 @@ Reference Guide
 
 ## Table of Contents
 
-### One Hot Encoding
+### Label Encoding
+
+#### One Hot
+```pd.get_dummies(df)```
+```
+from sklearn.preprocessing import OneHotEncoder
+y = OneHotEncoder().fit_transform(x)
+```
