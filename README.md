@@ -2,8 +2,8 @@
 Reference Guide 
 
 ## Table of Contents
-[Label Encoding](#Label-Encoding)  
-* [One Hot](#One-Hot)  
+* [Label Encoding](#Label-Encoding)
+    * [One Hot](#One-Hot)  
   
 [Data Scaling](#Data-Scaling)  
   
