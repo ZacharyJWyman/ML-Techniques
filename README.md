@@ -26,6 +26,7 @@ call ```.toarray()``` to convert to sparse to array
 ```from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor```
 ```from xgboost import XGBRegressor```
 ```from lightgbm import LGMBRegressor```  
+  
 usage: 
 ```   
 lin_reg = LinearRegression()
@@ -36,6 +37,7 @@ rfr = RandomForestRegressor()
 lgm = LGMBRegressor()
 ridge = Ridge()
 ```
+  
 fitting:
 ```
 lin_reg.fit(X_train, y_train)
@@ -47,15 +49,38 @@ lgm.fit(X_train, y_train)
 ridge.fit(X_train, y_train)
 ```
 if error occurs consider calling ```.values``` after df
+  
+    
+##### Scoring
+```
+def print_scores(y_test, y_pred):
+    print('MAE: ' + str(metrics.mean_absolute_error(y_test, y_pred)))
+    print('MSE: ' + str(metrics.mean_squared_error(y_test, y_pred)))
+    print('RMSE: ' + str(np.sqrt(metrics.mean_squared_error(y_test, y_pred))))
+    print('R-Squared: ' + str(metrics.r2_score(y_test, y_pred)))
+ ```
+
+#### Classification
+```from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier,  VotingClassifier```
+```from sklearn.tree import DecisionTreeClassifier```
+
 
 ##### Scoring
 ```from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score```
 usage: ```accuracy_score(y_test, y_pred)```
 
-#### Classification
-```from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier,  VotingClassifier```
-```from sklearn.tree import DecisionTreeClassifier```
-usage: ```
+#### Hyptertuning Parameters
+```from sklearn.model_selection import GridSearchCV, RandomizedSearchCV```
+usage:
+```param_grid = {
+    'n_estimators': [100, 200, 500],
+    'max_depth': ['6' ,'8' ,'9'],
+}
 
-##### Scoring
-```from sklearn
+grid_search = GridSearchCV(estimator = xgb, param_grid = param_grid, cv = 5, random_state = 42)
+grid_search.fit(X_train, y_train)
+grid_search.best_estimator_
+grid_search.best_params_
+```
+
+
