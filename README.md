@@ -2,6 +2,7 @@
 Reference Guide 
 
 ## Table of Contents
+* [Label Encoding](#Label-Encoding)
 
 ### Label Encoding
 
