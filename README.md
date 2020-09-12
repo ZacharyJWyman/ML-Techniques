@@ -8,8 +8,7 @@ Reference Guide
 * [Model Selection](#Model-Selection)  
      * [Regression](#Regression)        
      * [Classification](#Classification)     
-  
-[Hypertuning](#Hypertuning-Parameters)  
+* [Hypertuning](#Hypertuning-Parameters)    
 
 ### Label Encoding
 
