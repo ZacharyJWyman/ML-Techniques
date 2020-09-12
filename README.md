@@ -8,7 +8,9 @@ Reference Guide
 * [Model Selection](#Model-Selection)  
      * [Regression](#Regression)        
      * [Classification](#Classification)     
-* [Hypertuning](#Hypertuning-Parameters)    
+* [Hypertuning](#Hypertuning-Parameters)   
+* [Stacking & Blending](#Stacking-&-Blending)  
+
 
 ### Label Encoding
 
@@ -107,7 +109,7 @@ if error occurs consider calling ```.values``` after df
 ```from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score```  
 usage: ```accuracy_score(y_test, y_pred)```
 
-#### Hyptertuning Parameters
+### Hyptertuning Parameters
 ```from sklearn.model_selection import GridSearchCV, RandomizedSearchCV```  
   
 usage:
@@ -123,7 +125,7 @@ grid_search.best_estimator_
 grid_search.best_params_
 ```
   
-#### Stacking & Blending  
+### Stacking & Blending  
 Stacking and Blending ensemble-techniques generally increase model accuracy while creating a more robust model (less sensitive to outliers). 
 ```from mlxtend import StackingCVRegressor, StackingCVClassifier```  
   
