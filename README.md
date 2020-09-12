@@ -6,8 +6,8 @@ Reference Guide
 ### Label Encoding
 
 #### One Hot
-usage on a dataframe: 
-```pd.get_dummies(df)```
+usage on a dataframe: ```pd.get_dummies(df)```
+  
 will return a sparse array: 
 ```
 from sklearn.preprocessing import OneHotEncoder
