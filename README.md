@@ -7,10 +7,10 @@ Reference Guide
   
 [Data Scaling](#Data-Scaling)  
   
-[Model Selection](#Model-Selection)  
-* [Regression](#Regression)    
+[Model Selection](#Model-Selection)
+* [Regression](#Regression)  
   * [Scoring](#Regression-Scoring)    
-* [Classification](#Classification)  
+* [Classification](#Classification)
   * [Scoring](#Classification-Scoring)  
   
 [Hypertuning](#Hypertuning-Parameters)  
