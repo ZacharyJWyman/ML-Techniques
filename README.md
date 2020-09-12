@@ -9,7 +9,7 @@ Reference Guide
   
 * [Model Selection](#Model-Selection)  
       * [Regression](#Regression)  
-            [Scoring](#Regression-Scoring)      
+            #[Scoring](#Regression-Scoring)      
       * [Classification](#Classification)  
             [Scoring](#Classification-Scoring)    
   
