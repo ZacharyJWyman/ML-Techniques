@@ -4,12 +4,15 @@ Reference Guide
 ## Table of Contents
 [Label Encoding](#Label-Encoding)  
 * [One Hot](#One-Hot)  
+  
 [Data Scaling](#Data-Scaling)  
+  
 [Model Selection](#Model-Selection)  
-* [Regression](#Regression)  
-  * [Scoring](#Regression-Scoring)  
+* [Regression](#Regression)    
+  * [Scoring](#Regression-Scoring)    
 * [Classification](#Classification)  
   * [Scoring](#Classification-Scoring)  
+  
 [Hypertuning](#Hypertuning-Parameters)  
 
 ### Label Encoding
