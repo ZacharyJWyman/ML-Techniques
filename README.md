@@ -25,7 +25,7 @@ call ```.toarray()``` to convert to sparse to array
 ```from sklearn.linear_model import LinearRegression, LogisticRegression, Ridge, Lasso, ElasticNet```
 ```from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor```
 ```from xgboost import XGBRegressor```
-```from lightgbm import LGMBRegressor```
+```from lightgbm import LGMBRegressor```  
 usage: 
 ```   
 lin_reg = LinearRegression()
