@@ -9,7 +9,7 @@ Reference Guide
      * [Regression](#Regression)        
      * [Classification](#Classification)     
 * [Hypertuning](#Hypertuning-Parameters)   
-* [Stacking & Blending](#Stacking/Blending)  
+* [Stacking & Blending](#Stacking-/-Blending)  
 
 
 ### Label Encoding
