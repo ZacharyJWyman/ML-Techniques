@@ -3,4 +3,4 @@ Reference Guide
 
 ## Table of Contents
 
-## One Hot Encoding
+### One Hot Encoding
