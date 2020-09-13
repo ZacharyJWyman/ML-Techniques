@@ -11,7 +11,6 @@ Reference Guide
 * [Hypertuning](#Hypertuning-Parameters)   
 * [Stacking & Blending](#Stacking-and-Blending)  
 * [Dimensionality Reduction](#Dimensionality-Reduction)
-     * [PCA](#PCA)
 
 
 ### Label Encoding
