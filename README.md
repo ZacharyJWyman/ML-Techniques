@@ -23,7 +23,7 @@ will return a sparse array:
 from sklearn.preprocessing import OneHotEncoder
 y = OneHotEncoder().fit_transform(x)
 ```
-call ```.toarray()``` to convert to sparse to array 
+call ```.toarray()``` to convert sparse to array 
 
 ### Data Scaling
 ```from sklearn.preprocessing import StandardScaler```  
