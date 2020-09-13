@@ -10,6 +10,8 @@ Reference Guide
      * [Classification](#Classification)     
 * [Hypertuning](#Hypertuning-Parameters)   
 * [Stacking & Blending](#Stacking-and-Blending)  
+* [Dimensionality Reduction](#Dimensionality-Reduction)
+     * [PCA](#PCA)
 
 
 ### Label Encoding
@@ -146,6 +148,18 @@ def blend(X_test):
             0.25 * rfr.predict(X_test) + \
            0.5 * stack_gen.predict(np.array(X_test)))
 ```
-   
-   
+  
+### Dimensionality Reduction  
+PCA: 
+``` 
+from sklearn.decomposition import PCA
+pca = PCA(n_components = #)
+pca_result = pca.fit_transform(df[cols].values)
+```
+  
+Factor Analysis:
+```
+from sklearn.decomposition import FactorAnalysis
+same implementation as PCA
+```
 
